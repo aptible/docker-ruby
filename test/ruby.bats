@@ -26,7 +26,7 @@
   dpkg -s libyaml-dev | grep -E "Version: 0.1.(4-[2-9]|6-[0-9])"
 }
 
-@test "It should install RubyGems >= 2.6.13" {
-  # See http://blog.rubygems.org/2017/08/27/2.6.13-released.html
-  ruby -e 'p Gem::Version.new(Gem::VERSION) >= Gem::Version.new("2.6.13")' | grep true
+@test "It should install RubyGems >= 2.7.6" {
+  # See https://blog.rubygems.org/2018/02/15/2.7.6-released.html
+  ruby -e 'p Gem::Version.new(Gem::VERSION) >= Gem::Version.new("2.7.6")' | grep true
 }
