@@ -1,6 +1,8 @@
 FROM quay.io/<%= ENV.fetch('FROM') %>
 
-ENV RUBY_VERSION <%= ENV.fetch('RUBY_VERSION') %>
+ENV RUBY_MAJOR_MINOR <%= ENV.fetch('RUBY_MAJOR_MINOR') %>
+ENV RUBY_PATCH <%= ENV.fetch('RUBY_PATCH') %>
+ENV RUBY_VERSION <%= ENV.fetch('RUBY_MAJOR_MINOR') %>.<%= ENV.fetch('RUBY_PATCH') %>
 ENV RUBY_SHA1SUM <%= ENV.fetch('RUBY_SHA1SUM') %>
 
 RUN BUILD_DIR="/tmp/ruby-build" \
@@ -9,7 +11,7 @@ RUN BUILD_DIR="/tmp/ruby-build" \
     libreadline6-dev libyaml-dev tzdata \
  && mkdir -p "$BUILD_DIR" \
  && cd "$BUILD_DIR" \
- && wget -q "http://cache.ruby-lang.org/pub/ruby/ruby-${RUBY_VERSION}.tar.gz" \
+ && wget -q "http://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR_MINOR}/ruby-${RUBY_VERSION}.tar.gz" \
  && echo "${RUBY_SHA1SUM}  ruby-${RUBY_VERSION}.tar.gz" | sha1sum -c - \
  && tar xzf "ruby-${RUBY_VERSION}.tar.gz" \
  && cd "ruby-${RUBY_VERSION}" \
