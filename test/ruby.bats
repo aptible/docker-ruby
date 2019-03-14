@@ -34,3 +34,13 @@
 @test "It should install tzdata" {
   dpkg -l tzdata
 }
+
+@test "It should be configured with jemalloc if flagged" {
+  if ! [[ ${RUBY_CONFIG_OPTS} =~ .*\-\-with\-jemalloc.* ]]; then
+    skip "'--with-jemalloc' flag not present"
+  fi
+
+  # "LIBS"      : Ruby version <= 2.5
+  # "MAINLIBS"  : Ruby version > 2.5
+  ruby -r rbconfig -e "puts RbConfig::CONFIG.slice('LIBS', 'MAINLIBS')" | grep "\-ljemalloc"
+}

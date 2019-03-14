@@ -1,7 +1,13 @@
 REGISTRY = quay.io
 REPOSITORY = aptible/ruby
 
+# Conditionally inject Ruby tag suffix, if present
+ifdef RUBY_TAG_SUFFIX
+export TAG = $(RUBY_TAG)-$(RUBY_TAG_SUFFIX)-$(FROM_OS)-$(FROM_TAG)
+else
 export TAG = $(RUBY_TAG)-$(FROM_OS)-$(FROM_TAG)
+endif
+
 export FROM = aptible/$(FROM_OS):$(FROM_TAG)
 
 # Now, we have to figure out aliases.

@@ -4,18 +4,20 @@ ENV RUBY_MAJOR_MINOR <%= ENV.fetch('RUBY_MAJOR_MINOR') %>
 ENV RUBY_PATCH <%= ENV.fetch('RUBY_PATCH') %>
 ENV RUBY_VERSION <%= ENV.fetch('RUBY_MAJOR_MINOR') %>.<%= ENV.fetch('RUBY_PATCH') %>
 ENV RUBY_SHA1SUM <%= ENV.fetch('RUBY_SHA1SUM') %>
+ENV RUBY_BUILD_DEPENDENCIES="<%= ENV['RUBY_BUILD_DEPENDENCIES'] %>"
+ENV RUBY_CONFIG_OPTS="<%= ENV['RUBY_CONFIG_OPTS'] %>"
 
 RUN BUILD_DIR="/tmp/ruby-build" \
  && apt-get update \
  && apt-get -y install wget build-essential zlib1g-dev libssl-dev \
-    libreadline6-dev libyaml-dev tzdata \
+    libreadline6-dev libyaml-dev tzdata ${RUBY_BUILD_DEPENDENCIES} \
  && mkdir -p "$BUILD_DIR" \
  && cd "$BUILD_DIR" \
  && wget -q "http://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR_MINOR}/ruby-${RUBY_VERSION}.tar.gz" \
  && echo "${RUBY_SHA1SUM}  ruby-${RUBY_VERSION}.tar.gz" | sha1sum -c - \
  && tar xzf "ruby-${RUBY_VERSION}.tar.gz" \
  && cd "ruby-${RUBY_VERSION}" \
- && ./configure --enable-shared --prefix=/usr \
+ && ./configure --enable-shared --prefix=/usr ${RUBY_CONFIG_OPTS} \
  && make \
  && make install \
  && cd / \
