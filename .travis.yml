@@ -24,15 +24,6 @@ env:
     - RUBY_TAG=2.5 FROM_OS=ubuntu FROM_TAG=16.04
     - RUBY_TAG=2.6 FROM_OS=ubuntu FROM_TAG=16.04
 
-    - RUBY_TAG=1.9.3 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.0.0 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.1 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.2 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.3 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.4 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.5 FROM_OS=debian FROM_TAG=wheezy
-    - RUBY_TAG=2.6 FROM_OS=debian FROM_TAG=wheezy
-
     - RUBY_TAG=1.9.3 FROM_OS=debian FROM_TAG=jessie
     - RUBY_TAG=2.0.0 FROM_OS=debian FROM_TAG=jessie
     - RUBY_TAG=2.1 FROM_OS=debian FROM_TAG=jessie
