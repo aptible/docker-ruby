@@ -5,6 +5,15 @@
 
 The Ruby programming language, on Docker.
 
+## Intended Use
+
+This image is used internally by Aptible. We do not recommend that customers
+use this repo, and instead recommmend the Official Docker Ruby image :
+https://hub.docker.com/_/ruby
+
+Please see our [FAQ](https://www.aptible.com/documentation/enclave/tutorials/faq/aptible-base-images.html)
+for further information.
+
 ## Installation and Usage
 
     docker pull quay.io/aptible/ruby
