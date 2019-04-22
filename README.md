@@ -13,12 +13,12 @@ The Ruby programming language, on Docker.
 ## Available Tags
 
 * `latest`: Currently Ruby 2.6.2 (don't depend on this tag: it will change over time).
-* `1.9.3-ubuntu-16.04` (aliased as `1.9.3`): Ruby 1.9.3-p547
-* `2.0.0-ubuntu-16.04` (aliased as `2.0.0`): Ruby 2.0.0-p648
-* `2.1-ubuntu-16.04`   (aliased as `2.1`):   Ruby 2.1.10
-* `2.2-ubuntu-16.04`   (aliased as `2.2`):   Ruby 2.2.10
-* `2.3-ubuntu-16.04`   (aliased as `2.3`):   Ruby 2.3.8
-* `2.4-ubuntu-16.04`   (aliased as `2.4`):   Ruby 2.4.5
+* `1.9.3-ubuntu-16.04` (aliased as `1.9.3`): Ruby 1.9.3-p547  (EOL February 23, 2015)
+* `2.0.0-ubuntu-16.04` (aliased as `2.0.0`): Ruby 2.0.0-p648  (EOL February 24, 2016)
+* `2.1-ubuntu-16.04`   (aliased as `2.1`):   Ruby 2.1.10  (EOL March 31, 2017)
+* `2.2-ubuntu-16.04`   (aliased as `2.2`):   Ruby 2.2.10  (EOL March 31, 2018)
+* `2.3-ubuntu-16.04`   (aliased as `2.3`):   Ruby 2.3.8  (EOL March 31, 2019)
+* `2.4-ubuntu-16.04`   (aliased as `2.4`):   Ruby 2.4.6
 * `2.5-ubuntu-16.04`   (aliased as `2.5`):   Ruby 2.5.5
 * `2.6-ubuntu-16.04`   (aliased as `2.6`):   Ruby 2.6.2
 
