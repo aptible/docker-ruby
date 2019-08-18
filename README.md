@@ -27,7 +27,7 @@ for further information.
 * `2.1-ubuntu-16.04`   (aliased as `2.1`):   Ruby 2.1.10  (EOL March 31, 2017)
 * `2.2-ubuntu-16.04`   (aliased as `2.2`):   Ruby 2.2.10  (EOL March 31, 2018)
 * `2.3-ubuntu-16.04`   (aliased as `2.3`):   Ruby 2.3.8  (EOL March 31, 2019)
-* `2.4-ubuntu-16.04`   (aliased as `2.4`):   Ruby 2.4.6
+* `2.4-ubuntu-16.04`   (aliased as `2.4`):   Ruby 2.4.6  (EOL March 31, 2020)
 * `2.5-ubuntu-16.04`   (aliased as `2.5`):   Ruby 2.5.5
 * `2.6-ubuntu-16.04`   (aliased as `2.6`):   Ruby 2.6.2
 
