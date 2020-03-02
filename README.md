@@ -21,7 +21,7 @@ for further information.
 
 ## Available Tags
 
-* `latest`: Currently Ruby 2.6.5 (don't depend on this tag: it will change over time).
+* `latest`: Currently Ruby 2.7.0 (don't depend on this tag: it will change over time).
 * `1.9.3-ubuntu-16.04` (aliased as `1.9.3`): Ruby 1.9.3-p547  (EOL February 23, 2015)
 * `2.0.0-ubuntu-16.04` (aliased as `2.0.0`): Ruby 2.0.0-p648  (EOL February 24, 2016)
 * `2.1-ubuntu-16.04`   (aliased as `2.1`):   Ruby 2.1.10  (EOL March 31, 2017)
@@ -30,6 +30,7 @@ for further information.
 * `2.4-ubuntu-16.04`   (aliased as `2.4`):   Ruby 2.4.9  (EOL March 31, 2020)
 * `2.5-ubuntu-16.04`   (aliased as `2.5`):   Ruby 2.5.7
 * `2.6-ubuntu-16.04`   (aliased as `2.6`):   Ruby 2.6.5
+* `2.7-ubuntu-16.04`   (aliased as `2.7`):   Ruby 2.7.0
 
 As the name implies, those images are based on Ubuntu. You can use the Debian
 variants (which are slightly lighter) using the following tags:
@@ -42,6 +43,7 @@ variants (which are slightly lighter) using the following tags:
 * `2.4-debian-jessie`
 * `2.5-debian-jessie`
 * `2.6-debian-jessie`
+* `2.7-debian-jessie`
 
 There are other variations on those images, you can [view all the available
 tags on Quay](https://quay.io/repository/aptible/ruby?tab=tags).

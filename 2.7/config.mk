@@ -1,0 +1,6 @@
+export RUBY_MAJOR_MINOR = 2.7
+export RUBY_PATCH = 0
+
+export RUBY_SHA1SUM = 6f4e99b5556010cb27e236873cb8c09eb8317cd5
+
+export BUNDLER_VERSION = 2.0
