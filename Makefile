@@ -1,20 +1,28 @@
-# Load the latest tag, and set a default for TAG. The goal here is
-# to ensure TAG is set as early possible, considering it's usually
+# Load the latest tag, and set defaults. The goal here is to
+# ensure tags are set as early possible, considering it's usually
 # provided as an input anyway, but we want running "make" to
 # *just work*.
 
 include latest.mk
 
-ifndef LATEST_TAG
-$(error LATEST_TAG *must* be set in latest.mk)
+ifndef LATEST_RUBY_TAG
+$(error LATEST_RUBY_TAG *must* be set in latest.mk)
 endif
 
-ifeq "$(TAG)" "latest"
-override TAG = $(LATEST_TAG)
+ifndef LATEST_FROM_OS
+$(error LATEST_FROM_OS *must* be set in latest.mk)
 endif
 
-TAG ?= $(LATEST_TAG)
+ifndef LATEST_FROM_TAG
+$(error LATEST_FROM_TAG *must* be set in latest.mk)
+endif
 
+RUBY_TAG ?= $(LATEST_RUBY_TAG)
+FROM_OS ?= $(LATEST_FROM_OS)
+
+ifeq "$(FROM_OS)" "$(LATEST_FROM_OS)"
+FROM_TAG ?= $(LATEST_FROM_TAG)
+endif
 
 # Import configuration. config.mk must set the variables REGISTRY
 # and REPOSITORY so the Makefile knows what to call your image.
